@@ -13,6 +13,7 @@
                 return;
             }
             
+
              // create list item
             const listItem = document.createElement('li');
             listItem.textContent = taskText; // set text content
@@ -20,31 +21,31 @@
 
             // Append the list item to the task list
             taskList.appendChild(listItem); 
-            // Create a delete button
-            const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'delete';
-            deleteButton.classList.add('deleteButton');  // add a class to the button for styling purposes
-            listItem.appendChild(deleteButton);
-            
-            
-            // clear input value 
-            input.value =''; 
-
-            //add delete functionality
-            deleteButton.addEventListener('click', ()=>{
-                taskList.removeChild(listItem);
-            })
-
+           
             // Create a checkbox
             const checkBox = document.createElement('input');
-            checkBox.classList.add('check-box');
             checkBox.type = 'checkbox';
+            checkBox.classList.add('check-box');
+            
             listItem.appendChild(checkBox);
 
             // add checkbox functionality
             checkBox.addEventListener('change',()=>{
             listItem.classList.toggle('completed'); // toggle completed
             })
-
+             // Create a delete button
+             const deleteButton = document.createElement('button');
+             deleteButton.textContent = 'delete';
+             deleteButton.classList.add('deleteButton');  // add a class to the button for styling purposes
+             listItem.appendChild(deleteButton);
+             
+             
+             // clear input value 
+             input.value =''; 
+ 
+             //add delete functionality
+             deleteButton.addEventListener('click', ()=>{
+                 taskList.removeChild(listItem);
+             })
             
         })  
