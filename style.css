@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #9c8585;
+    display: flex;
+    justify-content: center;
+    height:auto;
+    overflow: auto;
+}
+h1{
+    color:#000;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    background-color: rgb(139, 151, 161);
+    border-radius: 20px;
+    margin-top  : 30px;
+    width: 400px;
+    min-height: 100px;
+    max-height:min-content;
+    box-shadow: 10px 10px 30px;
+}
+#taskInput{
+    background-color: rgb(196, 208, 218);
+    color: #413434;
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    outline: none;
+}
+#addButton{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 10px;
+}
+#addButton:hover{
+    background-color: rgb(64, 153, 65);
+}
+#addButton:active{
+    scale: 0.95;
+}
+.list-item{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(196, 208, 218);
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    color: #092327;
+    overflow: auto;
+}
+#taskList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    color: #092327;
+}
+.check-box{
+    position: absolute;
+    background-color: transparent;
+    border: 2px solid #000;
+    margin-left: 20%;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+.deleteButton{
+    background-color: #f86156;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 50px; 
+}
+.deleteButton:active{
+    
+    scale: 0.95;
+}
+.deleteButton:hover{
+    background-color: #fd4235;
+}
