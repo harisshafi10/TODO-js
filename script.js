@@ -1,8 +1,12 @@
         const input = document.getElementById('taskInput'); // get the input element
         const button = document.getElementById('addButton'); // get the button
         const taskList = document.getElementById('taskList'); // get the list
+        const form = document.getElementById('myform'); // get the form
 
-        button.addEventListener('click', ()=>{  
+        // Add form submit event listener
+        
+        form.addEventListener('submit', (e)=>{  
+            e.preventDefault();  // prevent form submission
             const taskText = input.value;  // get input value
             if(taskText.trim()=== ''){
                 alert('task cannot be empty');  // show error message if taskText is empty
@@ -14,14 +18,15 @@
             listItem.textContent = taskText; // set text content
             listItem.classList.add('list-item')  // add class to list item
 
+            // Append the list item to the task list
+            taskList.appendChild(listItem); 
             // Create a delete button
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'delete';
             deleteButton.classList.add('deleteButton');  // add a class to the button for styling purposes
             listItem.appendChild(deleteButton);
             
-            // Append the list item to the task list
-            taskList.appendChild(listItem); 
+            
             // clear input value 
             input.value =''; 
 
